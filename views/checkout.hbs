@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images\browser.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title> Click & Ship </title>
+</head>
+
+<body id="thebody" class="my_body d_flex" >
+
+    {{>csnavbar usernameLink=usernameLink}}
+
+    <div>
+       <div id="box1" class="container-fluid mt-5">
+
+            <div class= "row container-fluid"> 
+                <div class="col-sm-3 formatText adjust" > Picture </div>
+                <div class="col-sm-3 formatText" > Product Name </div>
+                <div class="col-sm-2 formatText adjustL" > Quantity </div>
+                <div class="col-sm-2 formatText adjust2L" > Price </div>
+            </div>
+
+            <div class="row container-fluid mt-1"> <hr> </div>
+            {{#if item includeZero=true}}
+            
+            {{#each item}}
+
+            <div class="row container-fluid mt-4"> 
+                <div class="hidden" > {{this.itemID}} </div>
+                <div class="col-sm-3" >  <img src="{{this.itemPic}}"> </div>
+                <div class="col-sm-3" > {{this.itemName}} </div>
+                <div class="col-sm-1 adjust3L"> {{this.qty}} </div> 
+                <div class="col-sm-2 adjust4L price">P {{this.itemPrice}} </div> 
+                <div class="col-sm-2" >   
+                    <button type="input"  class="btn btn-primary removeBtn"> Remove </button> 
+
+                </div>
+            </div>
+
+         
+            {{/each}}
+            
+            {{else}}
+ <div class="row container-fluid mt-4"> Cart is Empty ! </div>
+            {{/if}}
+              
+           
+            <div class="row container-fluid mt-5 formatText"> Delivery Address </div>
+            <div class="row container-fluid mt-1"> {{this.address}} </div>
+            <div class="row container-fluid mt-2"> <hr> </div>
+ 
+            <div class="row container-fluid mb-3"> 
+                <div class ="col" id="checkoutBtn"> 
+                    <form>
+                    <button type="submit" id="submitButton" class="btn btn-primary" onclick="checkOut()"> 
+                    <div> CHECKOUT </div>  
+                    </button>
+                    </form>
+                </div>
+                <div class="col" id="totalCostBox"> TOTAL: 0 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    window.onload = updateTotal;
+
+
+    window.onload = start;
+    function start ()
+    {
+        
+         updateTotal();
+        var total = document.getElementById("totalCostBox").innerText;
+        var number = 0;
+        if (total != "TOTAL: P 0")
+        {
+               $('#submitButton').prop('disabled', false);        
+        }
+        else
+                $('#submitButton').prop('disabled', true);
+    }
+
+    $('.btn.btn-primary.removeBtn').click((event) => { 
+        var card = event.currentTarget.parentElement.parentElement.firstElementChild.innerHTML
+        var stocks = event.currentTarget.parentElement.parentElement.children[3].innerHTML
+        console.log("QUANTITY GONE IS " + stocks);
+        console.log(card);
+    $.get('/delete', {_id : card, qty : stocks}, function (result) {});
+    $(event.target).parents('.row.container-fluid.mt-4').remove();
+    updateTotal();
+    });
+        
+    function updateTotal()
+    {
+        var total = document.getElementById("totalCostBox").innerText;
+        var number = 0;
+        if (total != "TOTAL: P 0")
+            number = "TOTAL: P 0"
+        else 
+            number = total;
+        number = number.replace(/[^0-9]/g,"");
+        number = parseFloat(number);
+        console.log(number);
+        var numItems = document.getElementsByClassName("col-sm-2 adjust4L price").length
+        for (i = 0; i < numItems; i++)
+        {
+            number2 = document.getElementsByClassName("col-sm-1 adjust3L")[i].innerText;
+            number3 = document.getElementsByClassName("col-sm-2 adjust4L price")[i].innerText;
+            number2 = number2.replace(/P/gi,"");
+            number3 = number3.replace(/P/gi,"");
+            number2 = parseFloat(number2);
+            number3 = parseFloat(number3);
+            number = number + (number2 * number3); 
+        }
+
+        console.log(numItems)
+        console.log(number)
+
+        
+        document.getElementById("totalCostBox").innerText = "TOTAL: P " + number;
+    }
+    // COMPUTATION TOTAL PRICE 
+
+    function checkOut() {
+
+ 
+ 
+
+
+            $.get('/deleteAll', {}, function (result) {
+        console.log(result)
+      
+});
+ 
+
+
+    }
+
+</script>
+    

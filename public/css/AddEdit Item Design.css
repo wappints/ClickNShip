@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#body{
+    background-color: #EDEAE5;
+    font-family:Montserrat;
+}
+
+.center{
+    margin-left: auto;
+    margin-right : auto;
+}
+
+#header{
+    float:both;
+    clear: both;
+    display: table;
+    vertical-align:middle;
+    height:100px;
+    background-color:#026670;
+    text-align:center;
+    color:white;
+}
+#label{
+    text-align: center;
+}
+#content{
+    margin: 0px;
+    padding : 0px;
+    width:100%;
+}
+
+#MainPicBox{
+    height : 400px;
+    width  : 400px;
+    border : 1px solid black;
+}
+#picContent{
+    height : 400px;
+    width  : 300;
+    margin: 0;
+
+}
+.thumbnail{
+    height : 100px;
+    width  : 100px;
+    border : 1px solid black;
+    margin : 10px;
+}
+
+#itemPic{
+    height: 400px;
+    width : 400px;
+    object-fit :cover;
+}
+#itemPics{
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SubPic{
+    max-height: 100%;
+    max-width : 100%;
+    object-fit :cover;
+}
+
+#thumbnailsBox{
+    margin-left: auto;
+    margin-right:auto;
+    padding: 10px;
+    margin-top : 30px;
+    width: 600px;
+    border : 1px solid black;
+    display:flex;
+    justify-content : center;
+}
+
+#detailsBox{
+    background : #EDEAE5
+}
+
+#picturesBox{
+    background : #EDEAE5;
+}
+
+.itemBox{
+    padding-top : 3rem;
+    padding-left : 5rem;
+    height: 1000px;
+}
+
+#description{
+    height: 200px;
+}
+
+.form-label{
+    font-size: 20px;
+}
+
+#pname{
+    font-size: 30px;
+}
+
+.form .inputBox{
+    border-radius: 0px;
+    background-color: #EDEAE5;
+    border-bottom: 1px solid #026670;
+    border-top: none;
+    border-left: none;
+    border-right:none;
+}
+
+.form textarea{
+    border-radius : 5px;
+    background-color: #f8f7f5;
+    border: 1px solid #026670;
+}
+
+#submit{
+    margin-top: 70px;
+    background-color:#026670;
+    width: 100px;
+    color:white;
+}
+
+.upload{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#addbox{
+    margin-top: 22px;
+}
+
+.add{
+    zoom : 30%;
+    max-height : 50%;
+    max-width : 50%;
+}
+
+#addMain{
+    zoom : 30%;
+    max-height : 50%;
+    max-width : 50%;
+    margin-left: 350px;
+    margin-top: 350px;
+}
+
+#stock::-webkit-outer-spin-button,
+#stock::-webkit-inner-spin-button,  
+#price::-webkit-inner-spin-button,
+#price::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}

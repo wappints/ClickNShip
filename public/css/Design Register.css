@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#body{
+    background-color: #EDEAE5;
+    font-family:Montserrat;
+}
+
+#HeaderPanel{
+  margin-top :3%;
+  width: 800px;
+  text-align:center;
+} 
+
+#signup_container{
+  background-color:black;
+  width: 800px;
+  height : 700px;
+  display:flex;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container_child {
+  width: 50%;
+  color: #fff;
+}
+
+#bgpicture{
+  padding: 2.5rem;
+  background-image: linear-gradient(to bottom,#026670, #9FEDD7);
+}
+
+#signup_form {
+  padding: 2.5rem;
+  background: #ebe9e3db;
+}
+
+label {
+  font-size: .85rem;
+  color: black;
+}
+
+#start{
+  margin-top : 0px;
+}
+
+form .form-group{
+  position:relative;
+  border-bottom : 2px solid #026670;
+  margin : 0 0;
+}
+
+form .inputBox{
+  background-color:#EDEAE5;
+  padding : 0 5px;
+  height : 32px;
+  border : none;
+  background :none;
+  outline : none;
+  width : 100%; 
+  font : 20px;
+}
+
+.form-group label{
+  font-size : 16px;
+  position:absolute;
+  top: 50%;
+  left : 5px;
+  transform : translateY(-50%);
+  pointer-events:none;
+  transition : .5s;
+}
+
+.form-group span::before{
+  content: '';
+  position:absolute;
+  top : 40px;
+  left : 0;
+  width : 100%;
+  height : 2px;
+}
+
+#LoginPanel a{
+  color:#026670;
+}
+
+#submit{
+    padding : 5px;
+    width : 200px;
+    margin-top: 25px;
+    border-radius: 24px;
+    background : none;
+    border: 2px solid #026670;
+    width: 100px;
+    color:#047c87;
+    font-weight : bold;
+    transition: .5s;
+}
+
+#submit:hover{
+  background : #026670;
+  width : 150px;
+  color : white;
+  font-weight : normal;
+}
+.register{
+    text-align: center;
+}
+
+.error{
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color : black;
+  font-size: 12px;
+}
+

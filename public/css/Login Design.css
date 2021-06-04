@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#body{
+    background-color: #EDEAE5;
+    font-family:Montserrat;
+}
+                
+.center{
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.logo{
+    width : 500px;
+    margin-top: 80px;
+}
+
+#LoginBox{
+    margin-top : 40px;
+    width : 500px;
+    height: 330px;
+    padding : 20px;
+    border: 2px solid #026670;
+    text-align :center;
+}
+
+#username{
+    margin-top : 50px;
+}
+
+#LoginBox h1{
+    color : #026670;
+    font-weight : bold;
+}
+
+#LoginBox .inputBox{
+    border : 0;
+    background : none;
+    display: block;
+    width : 200px;
+    margin-left : auto;
+    margin-right : auto;
+    text-align : center;
+    border: 2px solid #026670;
+    padding : 14px 10px;
+    border-radius : 30px;
+    transition : 1s;
+}
+
+#LoginBox .inputBox:focus{
+    outline-width : 0;
+    width :300px;
+    border-color : #FCE181;
+}
+
+#submit{
+    border : 0;
+    background : none;
+    display: block;
+    width : 100px;
+    margin : 20px auto;
+    text-align : center;
+    border: 2px solid #026670;
+    color : #026670;
+    padding : 14px 10px;
+    border-radius : 30px;
+    transition : 1s;
+}
+
+#submit:hover{
+    background : #026670;
+    color : #EDEAE5;
+    width : 200px;
+}
+
+.register{
+    text-align: center;
+}
+
+.register a{
+    color : #026670;
+}
+
+.error{
+    margin-top : 0px;
+    font-size: 12px;
+}
