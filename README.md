@@ -1,10 +1,10 @@
-# CCAPDEV-2021T2-G05
-
-Machine Project for CCAPDEV2021T2
+# ClickNShip
 
 <br/><p align="center"><img src="https://res.cloudinary.com/dmgb45kl0/image/upload/v1621863005/logo_ieinpn.png"></p><br/>
 
-Click & Ship is a shopping application that aims to showcase local and startup
+Authors: Franchezka Cruz, Azriel Ortega, Yeohan Norona 
+
+A student-project about a website called Click & Ship is a shopping application that aims to showcase local and startup
 businesses in the Philippines. Users may opt to create a shop in their account wherein
 they can add information about their shop and upload items for sale. Shop owners
 may edit the information for their posts or completely delete them. Users may add to
@@ -17,7 +17,7 @@ Using a CLI:
 1. Clone the repository using:
 
 ```
-git clone https://github.com/DLSU-CCAPDEV/2021T2-G40.git
+git clone https://github.com/wappints/ClickNShip/
 ```
 
 2. Navigate to the 2021T2-G040 folder and install all the required dependencies using 
