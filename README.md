@@ -52,6 +52,13 @@ Sample users:
 - therealjennie       jennieBP
 - dosanthebest        goodboywho
 
+# To Fix
+1. The web app allows the user to order quantities beyond the stock of an item.
+2. The web app should remove the item if there is no stock.
+3. Checkout feature could have been more comprehensive.
+4. No edit comment feature.
+5. Delete comment feature appears only after refreshing the page.
+  
 # Authors:
 
 - Franchezka Cruz
