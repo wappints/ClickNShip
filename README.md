@@ -1,8 +1,12 @@
 # ClickNShip
 
-<br/><p align="center"><img src="https://res.cloudinary.com/dmgb45kl0/image/upload/v1621863005/logo_ieinpn.png"></p><br/>
+Second Term Project | Sophomore Year
 
 Authors: Franchezka Cruz, Azriel Ortega, Yeohan Norona 
+
+<br/><p align="center"><img src="https://res.cloudinary.com/dmgb45kl0/image/upload/v1621863005/logo_ieinpn.png"></p><br/>
+
+
 
 A student-project about a website called Click & Ship is a shopping application that aims to showcase local and startup
 businesses in the Philippines. Users may opt to create a shop in their account wherein
